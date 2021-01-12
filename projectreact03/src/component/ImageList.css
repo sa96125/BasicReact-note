@@ -1,0 +1,12 @@
+.image-list {
+    display: grid;
+    /* 1fr은 자동적으로 동일한 최대공간을 할당해줌. */
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    grid-auto-rows: 10px;
+    grid-gap:0 10px;
+}
+
+.image-list img{
+    width: 250px;
+    /* grid-row-end: span 2; */
+}

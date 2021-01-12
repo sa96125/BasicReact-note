@@ -1,0 +1,12 @@
+1. 검색창을 분리한다.
+    controll하기위해 'class' SearchComponent의 스타일링과 이벤트를 처리한다.
+    form tag -> default값으로 만든다.  eventpreventDefault();
+
+2. 검색어에 대한 data reqeust.
+    검색창의 이벤트에 대한 정보를 저장해야하므로 controll가능한 'class'컴포넌트로 바꿔준다.
+    이미지를 불러오기위한 API를 사용한다.
+    App컴포넌트에서 데이터를 요청한다.
+
+3. 각각의 이미지 로드한다. 
+    각각의 이미지정보를 DOM으로 부터 얻기 위해서 React.ref를 생성한다.
+    grid의 이해가 필요하다.
