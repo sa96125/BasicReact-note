@@ -1,25 +1,48 @@
 import React from 'react';
-import youtube from '../apis/youtube'
+import SearchBar from './SearchBar';
+import youtube from '../apis/youtube';
+import VideoList from './VideoList';
+import VideoDetail from './VideoDetail';
+
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { video: {} }
+    state = { videos: [], onSelectVideo: null }
+
+    componentDidMount() {
+        this.onInputSubmit('');
     }
 
     onInputSubmit = async (term) => {
-        const response = await youtube.get('', {
+        const response = await youtube.get('/search', {
+            params: {
+                q: term
+            }
+        });
 
-        })
+        this.setState({
+            videos: response.data.items,
+            onSelectVideo: response.data.items[0]
+        });
+    };
 
-        this.state.video = response;
+    onSelectVideo = (video) => {
+        this.setState({ onSelectVideo: video })
     }
 
     render() {
         return (
-            <div>
-                <SearchBar onSumit={this.onInputSubmit} />
-
+            <div className="ui container" style={{ marginTop: '20px' }}>
+                <SearchBar onSubmit={this.onInputSubmit} />
+                <div className="ui grid">
+                    <div className="ui row">
+                        <div className="eleven wide column">
+                            <VideoDetail video={this.state.onSelectVideo} />
+                        </div>
+                        <div className="five wide column">
+                            <VideoList onSelectVideo={this.onSelectVideo} videos={this.state.videos} />
+                        </div>
+                    </div>
+                </div>
             </div>
         );
     }
