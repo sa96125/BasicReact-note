@@ -59,3 +59,10 @@
 </br>
 
 
+***project06*** `semantic-ui` `axios` `wikipedia API`
+> #### 실시간 검색어를 구현하고 위키디피아의 정보와 링크를 리스트로 나열하는 웹어플리케이션  ####
+> * Hook system - 2. useEffect()
+> * useEffect의 사이클, return 했을 때 동작과정을 이해한다.
+> * setTimeout , clearTimeout
+</br>
+</br>
