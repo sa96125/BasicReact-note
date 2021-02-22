@@ -1,6 +1,7 @@
 import React from 'react';
 import './VideoItem.css';
 
+// 각각의 아이템에 대한 스타일 정리.
 const VideoItem = ({ video, onSelectVideo }) => {
     return (
         <div className="video-item item" onClick={() => onSelectVideo(video)}>

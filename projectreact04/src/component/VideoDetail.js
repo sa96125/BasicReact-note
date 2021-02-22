@@ -1,6 +1,6 @@
 import React from 'react';
 
-
+// 리스트에서 클릭되는 비디오의 객제를 넘겨 받아서 세부 정보를 표현 하는 곳.
 const VideoDetail = ({ video }) => {
     if (video == null) {
         return <div>Loading...</div>

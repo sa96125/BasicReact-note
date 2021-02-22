@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+// 이제는 눈 감고도 하는 서치 콤포넌트  ( 설명 생략 )
 class SearchBar extends React.Component {
     constructor(props) {
         super(props);
