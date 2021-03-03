@@ -42,6 +42,7 @@ export default () => {
 
   return (
     <div>
+      {/* 여기서 라우터 뭐냐면 네비게이션안에 있는 각각의 링크를 재설정할려고 따로 만든 a태그라고 생각하면 됨 */}
       <Header />
       <Route path="/">
         <Accordion items={items} />

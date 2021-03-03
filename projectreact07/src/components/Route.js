@@ -8,6 +8,7 @@ const Route = ({ path, children }) => {
       setCurrentPath(window.location.pathname);
     };
 
+    // 여기 이벤트는 경로 추출해오는 거:)
     window.addEventListener('popstate', onLocationChange);
 
     return () => {
